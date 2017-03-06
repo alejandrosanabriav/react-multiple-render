@@ -16,9 +16,16 @@ export default function multipleRender(component, selector) {
 			} catch(err) {
 				console.error('Check json structure on data-props', err);
 			}
+			
+			let componentElement = React.createElement(component, {...props});
 
-      render(React.createElement(component, {...props}), el);
-			components = components.concat([React.createElement(component, {...props})]);
+			if(React.isValidElement(componentElement)) {
+				render(componentElement, el);
+				components = components.concat([componentElement]);
+			} else {
+				console.error('check is a valid component');
+			}
+      
     });
 		
 		return components;
