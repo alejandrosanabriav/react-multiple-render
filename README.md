@@ -13,3 +13,8 @@ help you render your component multiple times
 		import Component from "../component";
 
 		multipleRender(Component, '.component-container');
+
+## test
+	npm test
+	
+	yarn test

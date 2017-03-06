@@ -4,7 +4,8 @@
   "description": "help you render your component multiple times.",
   "main": "index.js",
   "scripts": {
-    "test": "yarn jest"
+    "test": "jest",
+    "test:watch": "jest -- --watch"
   },
   "repository": {
     "url": "https://github.com/developersoul/react-multiple-render",
