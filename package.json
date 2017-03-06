@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest -- --watch",
-    "build": "webpack --p"
+    "build": "babel --presets es2015 src/ --out-dir dist/"
   },
   "repository": {
     "url": "https://github.com/developersoul/react-multiple-render",
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "babel": "^6.23.0",
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.0",
