@@ -4,17 +4,15 @@
 help you render your component multiple times
 
 ## Installation
-		npm install -S react-multiple-render
+	npm install -S react-multiple-render
 
-		yarn add react-multiple-render
+	yarn add react-multiple-render
 
 ## Usage
-		import multipleRender from "react-multiple-render";
-		import Component from "../component";
+	import multipleRender from "react-multiple-render";
+	import Component from "../component";
 
-		multipleRender(Component, '.component-container');
+	multipleRender(Component, '.component-container');
 
 ## test
-	npm test
-	
-	yarn test
+	npm test or yarn test
