@@ -1,5 +1,5 @@
 import React from "react";
-import multipleRender from "../index";
+import multipleRender from "../source/index";
 
 const Component = React.createClass({
 	render() {
