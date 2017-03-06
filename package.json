@@ -1,0 +1,29 @@
+{
+  "name": "react-multiple-render",
+  "version": "1.0.0",
+  "description": "help you render your component multiple times.",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn jest"
+  },
+  "repository": {
+    "url": "https://github.com/developersoul/react-multiple-render",
+    "type": "git"
+  },
+  "author": "Alejandro Sanabria <alesanabriav@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "jest": "^19.0.2",
+    "react-addons-test-utils": "^15.4.2"
+  }
+}
