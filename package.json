@@ -1,6 +1,6 @@
 {
   "name": "react-multiple-render",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "help you render your component multiple times.",
   "main": "./dist/index.js",
   "scripts": {
