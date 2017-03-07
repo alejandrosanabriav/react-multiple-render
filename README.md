@@ -4,15 +4,28 @@
 help you render your component multiple times
 
 ## Installation
-	npm install -S react-multiple-render
+```bash
+$ npm install -S react-multiple-render
 
-	yarn add react-multiple-render
+$ yarn add react-multiple-render
+```
 
 ## Usage
+```js
 	import multipleRender from "react-multiple-render";
 	import Component from "../component";
 
 	multipleRender(Component, '.component-container');
+```
+Always pass a valid json
+
+```html
+<div data-props='{
+	"someProp": "his value",
+	"someObj": { "deepProp": "hi" }
+}'>
+</div>
+```
 
 ## test
 	npm test or yarn test
