@@ -22,7 +22,9 @@ multipleRender(Component, '.component-container');
 Always pass a valid json
 
 ```html
-<div data-props='{
+<div
+	class='component-container'
+	data-props='{
 	"someProp": "his value",
 	"someObj": { "deepProp": "hi" }
 }'>
