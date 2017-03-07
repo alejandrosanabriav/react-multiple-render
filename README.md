@@ -31,5 +31,6 @@ Always pass a valid json
 
 ## test
 ```bash
-npm test or yarn test
+$ npm test 
+$ yarn test
 ```
