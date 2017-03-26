@@ -23,7 +23,7 @@ export default function multipleRender(component, selector) {
 				render(componentElement, el);
 				components = components.concat([componentElement]);
 			} else {
-				console.error('check is a valid component');
+				console.error("check it's a valid component");
 			}
       
     });

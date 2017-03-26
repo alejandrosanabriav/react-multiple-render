@@ -6,7 +6,9 @@ help you render your component multiple times
 ## Installation
 ```bash
 $ npm install -S react-multiple-render
-
+```
+or
+```bash
 $ yarn add react-multiple-render
 ```
 
@@ -34,5 +36,8 @@ Always pass a valid json
 ## test
 ```bash
 $ npm test 
+```
+or
+```bash
 $ yarn test
 ```
