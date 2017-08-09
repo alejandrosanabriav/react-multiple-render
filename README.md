@@ -15,7 +15,7 @@ $ yarn add react-multiple-render
 ## Usage
 with es6
 
-```js
+```javascript
 import multipleRender from "react-multiple-render";
 import Component from "../component";
 
@@ -27,15 +27,43 @@ Always pass a valid json
 <div
 	class='component-container'
 	data-props='{
-	"someProp": "his value",
-	"someObj": { "deepProp": "hi" }
+	"someProp": "this is a text",
+	"someObj": { "deepProp": "hi deep prop" },
+	"someArr": [{"name": "a"},{"name": "b"},{"name": "c"},{"name": "d"}]
 }'>
 </div>
 ```
 
+```javascript
+class ComponentName extends Component {
+	render() {
+		const { someProp, someObj, someArr } = this.props;
+		return (
+			<div>
+				{/* equal to: this is a text*/}
+				<span>{someProp}</span>
+				{/* equal to: hi deep prop*/}
+				<span>{someObj.deepProp}</span>
+				{/* equal to:
+					<ul>
+						<li>a</li>
+						<li>b</li>
+						<li>c</li>
+						<li>d</li>
+					</ul>
+				*/}
+				<ul>
+					{someArr.map(item => <li>{item.name}</li>)}
+				</ul>
+			</div>
+		)
+	}
+}
+```
+
 ## test
 ```bash
-$ npm test 
+$ npm test
 ```
 or
 ```bash
