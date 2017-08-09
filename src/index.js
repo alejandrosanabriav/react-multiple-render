@@ -5,7 +5,7 @@ export default function multipleRender(component, selector) {
   if (document.querySelectorAll(selector).length >= 1) {
     const containers = [...document.querySelectorAll(selector)];
     let components = [];
-		
+
     containers.forEach(el => {
       let props = {};
 
@@ -14,7 +14,7 @@ export default function multipleRender(component, selector) {
           ? JSON.parse(el.getAttribute("data-props"))
           : {};
       } catch (err) {
-        console.error("Check json structure on data-props", err);
+        console.log(`Check json structure on ${selector} data-props`);
       }
 
       let componentElement = React.createElement(component, { ...props });
