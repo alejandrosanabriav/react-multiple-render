@@ -1,13 +1,13 @@
 {
   "name": "react-multiple-render",
-  "version": "1.0.9",
-  "description": "help you render your component multiple times.",
+  "version": "1.1.1",
+  "description": "Render multiple times the same component with different props.",
   "keywords": [
     "react",
-    "react-dom",
-    "react-multiple",
-    "multiple-render",
-    "react-render"
+    "react multiple",
+    "multiple render",
+    "react render",
+    "dynamic render"
   ],
   "main": "./dist/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   },
   "author": "Alejandro Sanabria <alesanabriav@gmail.com>",
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },

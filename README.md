@@ -1,7 +1,7 @@
 # react-multiple-render
 [![Build Status](https://semaphoreci.com/api/v1/developersoul/react-multiple-render/branches/master/shields_badge.svg)](https://semaphoreci.com/developersoul/react-multiple-render)
 
-help you render your component multiple times
+### Render multiple times the same component with different props.
 
 ## Installation
 ```bash
@@ -40,10 +40,14 @@ class ComponentName extends Component {
 		const { someProp, someObj, someArr } = this.props;
 		return (
 			<div>
-				{/* equal to: this is a text*/}
-				<span>{someProp}</span>
-				{/* equal to: hi deep prop*/}
-				<span>{someObj.deepProp}</span>
+
+				<span>{someProp}</span>{/* equal to: this is a text*/}
+
+				<span>{someObj.deepProp}</span>{/* equal to: hi deep prop*/}
+
+				<ul>
+					{someArr.map(item => <li>{item.name}</li>)}
+				</ul>
 				{/* equal to:
 					<ul>
 						<li>a</li>
@@ -52,9 +56,6 @@ class ComponentName extends Component {
 						<li>d</li>
 					</ul>
 				*/}
-				<ul>
-					{someArr.map(item => <li>{item.name}</li>)}
-				</ul>
 			</div>
 		)
 	}
@@ -68,4 +69,13 @@ $ npm test
 or
 ```bash
 $ yarn test
+```
+
+## Build
+```bash
+$ npm run build
+```
+or
+```bash
+$ yarn build
 ```
