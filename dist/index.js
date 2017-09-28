@@ -19,6 +19,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function multipleRender(component, selector) {
+  var removeProps = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
   if (document.querySelectorAll(selector).length >= 1) {
     var containers = [].concat(_toConsumableArray(document.querySelectorAll(selector)));
     var components = [];
@@ -36,6 +38,11 @@ function multipleRender(component, selector) {
 
       if (_react2.default.isValidElement(componentElement)) {
         (0, _reactDom.render)(componentElement, el);
+
+        if (removeProps) {
+          el.removeAttribute('data-props');
+        }
+
         components = components.concat([componentElement]);
       } else {
         console.error("check it's a valid component");

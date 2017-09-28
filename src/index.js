@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 
-export default function multipleRender(component, selector) {
+export default function multipleRender(component, selector, removeProps = false) {
   if (document.querySelectorAll(selector).length >= 1) {
     const containers = [...document.querySelectorAll(selector)];
     let components = [];
@@ -21,6 +21,11 @@ export default function multipleRender(component, selector) {
 
       if (React.isValidElement(componentElement)) {
         render(componentElement, el);
+        
+        if (removeProps) {
+          el.removeAttribute('data-props');
+        }
+
         components = components.concat([componentElement]);
       } else {
         console.error("check it's a valid component");
